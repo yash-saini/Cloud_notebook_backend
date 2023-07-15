@@ -8,4 +8,6 @@ const notesUserSchema = new Schema({
   date: { type: Date, default: Date.now },
 });
 
-module.exports=mongoose.model("User",notesUserSchema);
+const User = mongoose.model("User",notesUserSchema);
+User.createIndexes();
+module.exports=User;
